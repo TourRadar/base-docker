@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #misc
-yum -y epel-release install telnet wget pstree bind-utils logwatch psmisc sudo cronie git mc iproute 
+yum -y install telnet wget pstree bind-utils logwatch psmisc sudo cronie git mc iproute epel-release
 
 
 #disable selinux
