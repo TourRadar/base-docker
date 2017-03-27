@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 #misc
-yum -y install telnet wget pstree bind-utils logwatch psmisc sudo cronie git mc iproute
+yum -y epel-release install telnet wget pstree bind-utils logwatch psmisc sudo cronie git mc iproute 
 
 
 #disable selinux
@@ -9,13 +9,11 @@ sed -i.bak  s/SELINUX=enforcing/SELINUX=disabled/ /etc/selinux/config
 setenforce 0
 
 #install PHP 7.1
-cd ~
-wget -q http://rpms.remirepo.net/enterprise/remi-release-7.rpm
-wget -q https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
-rpm -Uvh remi-release-7.rpm epel-release-latest-7.noarch.rpm
+cd cd ~
+wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm                
+rpm -Uvh remi-release-7.rpm
+yum-config-manager --enable remi                                                
 yum-config-manager --enable remi-php71
-rm -f remi-release-7.rpm
-rm -f epel-release-latest-7.noarch.rpm
 
 
 #app dependencies
