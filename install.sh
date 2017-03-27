@@ -54,7 +54,7 @@ rm -rf yuicompressor-2.4.7/
 #create TR user
 adduser tr
 
-
+mkdir -p /etc/php_extra
 #download new browscap
 wget http://browscap.org/stream?q=PHP_BrowsCapINI -O /etc/php_extra/browscap.ini
 
