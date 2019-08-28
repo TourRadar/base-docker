@@ -87,5 +87,3 @@ echo '[opcache]' >> $TRPHPINIDILE
 echo 'opcache.max_accelerated_files = 20000' >> $TRPHPINIDILE
 echo '[browscap]' >> $TRPHPINIDILE
 echo 'browscap = /etc/php_extra/browscap.ini' >> $TRPHPINIDILE
-
-
