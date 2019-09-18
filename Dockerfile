@@ -9,15 +9,14 @@ RUN yum -y install telnet wget pstree bind-utils logwatch psmisc sudo cronie git
   && yum -y install httpd mod_ssl php php-fpm php-opcache php-common php-cli php-bcmath php-mbstring php-pdo php-process php-xml php-soap php-redis php-mysql \
   && curl -sL https://rpm.nodesource.com/setup_11.x | bash - \
   && yum -y install nodejs-11.15.0 composer \
-  && npm install -g gulp \
-  && npm install -g bower \
+  && npm install -g gulp bower \
   && wget http://repo.mysql.com/mysql-community-release-el7-5.noarch.rpm \
   && rpm -ivh mysql-community-release-el7-5.noarch.rpm \
   && yum -y install mysql \
   && rm -f /etc/localtime \
   && ln -s /usr/share/zoneinfo/Europe/Vienna /etc/localtime \
   && adduser tr \
-  && mkdir -p /etc/php_extra \
+  && mkdir -p /etc/php_extra /run/php-fpm/ \
   && wget http://browscap.org/stream?q=PHP_BrowsCapINI -O /etc/php_extra/browscap.ini \
   && rm -rf *.rpm \
   && yum clean all
