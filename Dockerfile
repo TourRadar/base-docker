@@ -5,7 +5,7 @@ RUN yum -y install telnet wget pstree bind-utils logwatch psmisc sudo cronie git
   && wget http://rpms.famillecollet.com/enterprise/remi-release-7.rpm \
   && rpm -Uvh remi-release-7.rpm \
   && yum-config-manager --enable remi \
-  && yum-config-manager --enable remi-php71 \
+  && yum-config-manager --enable remi-php73 \
   && yum -y install httpd mod_ssl php php-fpm php-opcache php-common php-cli php-bcmath php-mbstring php-pdo php-process php-xml php-soap php-redis php-mysql \
   && curl -sL https://rpm.nodesource.com/setup_11.x | bash - \
   && yum -y install nodejs-11.15.0 composer \
